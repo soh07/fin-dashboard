@@ -28,13 +28,13 @@
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 pb-4 border-b border-slate-800">
         <div>
             <h1 class="text-xl font-bold font-mono tracking-tight text-white">AI Investment Dashboard</h1>
-            <p class="text-slate-500 text-xs mt-1 font-mono">2026-07-03 09:12 KST</p>
+            <p class="text-slate-500 text-xs mt-1 font-mono">2026-07-06 09:14 KST</p>
         </div>
         <div class="flex flex-wrap items-center gap-3 mt-3 sm:mt-0">
             <span class="font-mono text-sm">VIX <strong class="text-emerald-400">16.1</strong></span>
             <span class="px-2.5 py-1 rounded text-xs font-bold font-mono tip"
                   data-tip="시장 레짐: 추세(bull/bear)와 변동성(calm/volatile) 조합으로 4단계 분류. Risk-On=적극 투자, Risk-Off=방어 전환"
-                  style="color:#94a3b8; border:1px solid #94a3b833; background:#94a3b812">NEUTRAL</span>
+                  style="color:#22c55e; border:1px solid #22c55e33; background:#22c55e12">RISK-ON</span>
             <span class="font-mono text-sm font-bold text-emerald-400 tip"
                   data-tip="현재 권장 포지션 비중. VIX·낙폭가드·Kelly 조정이 복합 적용된 최종값. 100%=풀 포지션, 낮을수록 현금 비중 증가">포지션 92%</span>
         </div>
@@ -57,18 +57,18 @@
             <tbody>
         <tr class="border-b border-slate-800 last:border-0">
             <td class="py-2 pr-4 font-mono text-sm text-slate-400 capitalize tip" data-tip="12M-1M return rank (Jegadeesh-Titman). Strongest cross-sectional signal.">momentum</td>
-            <td class="py-2 pr-4 font-mono text-sm font-bold text-emerald-400">+0.170</td>
-            <td class="py-2 font-mono text-xs text-emerald-400">ACTIVE</td>
+            <td class="py-2 pr-4 font-mono text-sm font-bold text-amber-400">+0.024</td>
+            <td class="py-2 font-mono text-xs text-amber-400">WEAK</td>
         </tr>
         <tr class="border-b border-slate-800 last:border-0">
             <td class="py-2 pr-4 font-mono text-sm text-slate-400 capitalize tip" data-tip="Sharpe ratio + low max-drawdown + low volatility rank.">quality</td>
-            <td class="py-2 pr-4 font-mono text-sm font-bold text-emerald-400">+0.112</td>
-            <td class="py-2 font-mono text-xs text-emerald-400">ACTIVE</td>
+            <td class="py-2 pr-4 font-mono text-sm font-bold text-slate-500">+0.003</td>
+            <td class="py-2 font-mono text-xs text-slate-500">FLAT</td>
         </tr>
         <tr class="border-b border-slate-800 last:border-0">
             <td class="py-2 pr-4 font-mono text-sm text-slate-400 capitalize tip" data-tip="Above 200MA + golden cross + 4-quarter return consistency.">trend</td>
-            <td class="py-2 pr-4 font-mono text-sm font-bold text-emerald-400">+0.211</td>
-            <td class="py-2 font-mono text-xs text-emerald-400">ACTIVE</td>
+            <td class="py-2 pr-4 font-mono text-sm font-bold text-slate-500">+0.001</td>
+            <td class="py-2 font-mono text-xs text-slate-500">FLAT</td>
         </tr></tbody>
         </table>
     </div>
@@ -78,10 +78,36 @@
         <h2 class="text-amber-400 font-bold text-sm mb-1 font-mono uppercase tracking-wider">
             Data Ingestion Issues (1 / 193 tickers failed)
         </h2>
-        <p class="text-slate-500 text-xs mb-2">as of 2026-07-03 00:12 · 3 succeeded · predictions for failed tickers use stale or cached data</p>
+        <p class="text-slate-500 text-xs mb-2">as of 2026-07-06 00:14 · 192 succeeded · predictions for failed tickers use stale or cached data</p>
         <ul class="max-h-40 overflow-y-auto"><li class="font-mono text-xs text-amber-300/80 py-0.5">- 0043B0 (only 0 rows, need 50+)</li></ul>
     </div>
     
+    
+    <div class="border border-red-900/40 bg-red-950/20 rounded-lg p-4 mb-4">
+        <h2 class="text-red-400 font-bold text-sm mb-2 font-mono uppercase tracking-wider">🚨 긴급 알림 (3건)</h2>
+        <div class="overflow-x-auto"><table class="w-full"><tbody>
+        <tr class="border-b border-red-950/40 last:border-0">
+            <td class="py-1.5 pr-3 font-mono font-bold text-sm">AMAT</td>
+            <td class="py-1.5 pr-3 text-slate-500 text-xs hidden sm:table-cell">Applied Materi</td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-red-400">-7.3% <span class="text-slate-600 text-xs">1d</span></td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-red-400">-9.7% <span class="text-slate-600 text-xs">5d</span></td>
+            <td class="py-1.5 text-xs text-red-300/80 hidden md:table-cell">1d crash -7.4%, 5d drop -9.7%</td>
+        </tr>
+        <tr class="border-b border-red-950/40 last:border-0">
+            <td class="py-1.5 pr-3 font-mono font-bold text-sm">FIX</td>
+            <td class="py-1.5 pr-3 text-slate-500 text-xs hidden sm:table-cell">Comfort System</td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-red-400">-6.6% <span class="text-slate-600 text-xs">1d</span></td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-red-400">-13.7% <span class="text-slate-600 text-xs">5d</span></td>
+            <td class="py-1.5 text-xs text-red-300/80 hidden md:table-cell">1d crash -6.6%, 5d crash -13.7%, 10d drop -9.9%</td>
+        </tr>
+        <tr class="border-b border-red-950/40 last:border-0">
+            <td class="py-1.5 pr-3 font-mono font-bold text-sm">TSLA</td>
+            <td class="py-1.5 pr-3 text-slate-500 text-xs hidden sm:table-cell">Tesla</td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-red-400">-7.5% <span class="text-slate-600 text-xs">1d</span></td>
+            <td class="py-1.5 pr-4 font-mono text-sm text-emerald-400">+4.9% <span class="text-slate-600 text-xs">5d</span></td>
+            <td class="py-1.5 text-xs text-red-300/80 hidden md:table-cell">1d crash -7.5%</td>
+        </tr></tbody></table></div>
+    </div>
     
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -121,29 +147,29 @@
         <div class="flex justify-between items-center py-1.5 border-b border-slate-800 last:border-0">
             <span class="text-slate-400 text-sm font-mono tip shrink-0 mr-2" data-tip="미국 10년물 금리. 상승 시 성장주 밸류에이션 압박. 4.5% 이상은 위험 구간">미국 10Y</span>
             <div class="flex items-center gap-3">
-                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,17.1 2.9,16.8 3.7,18.3 4.6,18.2 5.4,17.8 6.3,18.6 7.1,20.0 8.0,17.8 8.8,17.6 9.7,17.0 10.5,15.3 11.4,15.6 12.2,15.6 13.1,15.6 14.0,13.7 14.8,12.1 15.7,11.8 16.5,13.4 17.4,13.9 18.2,12.4 19.1,11.9 19.9,9.0 20.8,10.5 21.6,9.0 22.5,10.7 23.3,8.4 24.2,7.8 25.1,10.3 25.9,11.1 26.8,10.9 27.6,11.0 28.5,10.5 29.3,10.3 30.2,11.6 31.0,11.5 31.9,10.9 32.7,11.4 33.6,12.5 34.4,11.8 35.3,11.1 36.2,12.7 37.0,12.6 37.9,11.6 38.7,11.5 39.6,10.8 40.4,11.1 41.3,10.5 42.1,10.0 43.0,8.4 43.8,9.1 44.7,9.4 45.6,7.6 46.4,8.4 47.3,9.9 48.1,9.0 49.0,9.7 49.8,8.6 50.7,7.2 51.5,6.7 52.4,7.3 53.2,3.8 54.1,3.1 54.9,2.0 55.8,4.4 56.7,4.1 57.5,4.8 58.4,6.4 59.2,6.7 60.1,7.4 60.9,7.5 61.8,6.9 62.6,7.4 63.5,6.5 64.3,6.9 65.2,5.3 66.0,4.9 66.9,5.5 67.8,5.2 68.6,7.2 69.5,6.6 70.3,7.1 71.2,8.1 72.0,7.2 72.9,7.5 73.7,6.0 74.6,6.4 75.4,8.8 76.3,9.0 77.1,9.5 78.0,6.6" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,18.2 2.9,17.8 3.7,18.6 4.6,20.0 5.4,17.8 6.3,17.6 7.1,17.0 8.0,15.3 8.8,15.6 9.7,15.6 10.5,15.6 11.4,13.7 12.2,12.1 13.1,11.8 14.0,13.4 14.8,13.9 15.7,12.4 16.5,11.9 17.4,9.0 18.2,10.5 19.1,9.0 19.9,10.7 20.8,8.4 21.6,7.8 22.5,10.3 23.3,11.1 24.2,10.9 25.1,11.0 25.9,10.5 26.8,10.3 27.6,11.6 28.5,11.5 29.3,10.9 30.2,11.4 31.0,12.5 31.9,11.8 32.7,11.1 33.6,12.7 34.4,12.6 35.3,11.6 36.2,11.5 37.0,10.8 37.9,11.1 38.7,10.5 39.6,10.0 40.4,8.4 41.3,9.1 42.1,9.4 43.0,7.6 43.8,8.4 44.7,9.9 45.6,9.0 46.4,9.7 47.3,8.6 48.1,7.2 49.0,6.7 49.8,7.3 50.7,3.8 51.5,3.1 52.4,2.0 53.2,4.4 54.1,4.1 54.9,4.8 55.8,6.4 56.7,6.7 57.5,7.4 58.4,7.5 59.2,6.9 60.1,7.4 60.9,6.5 61.8,6.9 62.6,5.3 63.5,4.9 64.3,5.5 65.2,5.2 66.0,7.2 66.9,6.6 67.8,7.1 68.6,8.1 69.5,7.2 70.3,7.5 71.2,6.0 72.0,6.4 72.9,8.8 73.7,9.0 74.6,9.5 75.4,9.5 76.3,8.4 77.1,6.9 78.0,6.6" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
                 <div class="text-right">
-                    <span class="font-mono font-semibold text-sm">4.48</span>
-                    <span class="font-mono text-xs text-emerald-400 ml-2">▲2.6%</span>
+                    <span class="font-mono font-semibold text-sm">4.49</span>
+                    <span class="font-mono text-xs text-emerald-400 ml-2">▲0.2%</span>
                 </div>
             </div>
         </div>
         <div class="flex justify-between items-center py-1.5 border-b border-slate-800 last:border-0">
             <span class="text-slate-400 text-sm font-mono tip shrink-0 mr-2" data-tip="원/달러 환율. 상승=원화 약세. 미국 주식 보유 시 환차손익 직결">USD/KRW</span>
             <div class="flex items-center gap-3">
-                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,20.0 2.9,19.1 3.7,17.1 4.6,12.5 5.4,15.8 6.3,13.0 7.1,12.4 8.0,15.3 8.8,14.0 9.7,13.7 10.5,14.4 11.4,9.8 12.2,11.7 13.1,12.3 14.0,9.3 14.8,11.5 15.7,9.4 16.5,12.2 17.4,10.4 18.2,9.9 19.1,8.8 19.9,9.0 20.8,7.7 21.6,9.5 22.5,8.2 23.3,8.7 24.2,8.7 25.1,8.9 25.9,10.2 26.8,13.3 27.6,14.0 28.5,12.7 29.3,13.4 30.2,14.5 31.0,13.8 31.9,13.3 32.7,15.2 33.6,14.6 34.4,12.1 35.3,13.3 36.2,13.0 37.0,13.8 37.9,14.0 38.7,14.2 39.6,11.9 40.4,13.9 41.3,14.2 42.1,13.6 43.0,13.9 43.8,18.2 44.7,16.7 45.6,15.8 46.4,13.8 47.3,11.1 48.1,11.5 49.0,11.0 49.8,10.4 50.7,11.2 51.5,8.9 52.4,10.1 53.2,9.4 54.1,8.1 54.9,7.8 55.8,9.2 56.7,9.6 57.5,10.7 58.4,9.0 59.2,8.4 60.1,7.6 60.9,5.6 61.8,5.2 62.6,2.0 63.5,5.8 64.3,6.2 65.2,6.3 66.0,7.5 66.9,8.6 67.8,8.1 68.6,8.4 69.5,6.3 70.3,4.5 71.2,5.4 72.0,4.3 72.9,4.8 73.7,3.7 74.6,3.2 75.4,4.8 76.3,3.9 77.1,2.9 78.0,2.4" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,20.0 2.9,17.9 3.7,13.1 4.6,16.5 5.4,13.6 6.3,13.0 7.1,16.0 8.0,14.7 8.8,14.3 9.7,15.0 10.5,10.2 11.4,12.2 12.2,12.8 13.1,9.6 14.0,12.0 14.8,9.8 15.7,12.7 16.5,10.9 17.4,10.3 18.2,9.2 19.1,9.4 19.9,8.0 20.8,9.9 21.6,8.6 22.5,9.0 23.3,9.0 24.2,9.2 25.1,10.6 25.9,13.9 26.8,14.6 27.6,13.2 28.5,14.0 29.3,15.2 30.2,14.5 31.0,13.9 31.9,15.9 32.7,15.2 33.6,12.7 34.4,13.9 35.3,13.6 36.2,14.4 37.0,14.6 37.9,14.8 38.7,12.4 39.6,14.5 40.4,14.8 41.3,14.2 42.1,14.5 43.0,19.1 43.8,17.5 44.7,16.6 45.6,14.4 46.4,11.5 47.3,12.0 48.1,11.5 49.0,10.9 49.8,11.6 50.7,9.2 51.5,10.5 52.4,9.8 53.2,8.5 54.1,8.2 54.9,9.6 55.8,10.0 56.7,11.2 57.5,9.4 58.4,8.7 59.2,7.9 60.1,5.8 60.9,5.3 61.8,2.0 62.6,6.0 63.5,6.4 64.3,6.6 65.2,7.8 66.0,9.0 66.9,8.4 67.8,8.8 68.6,6.5 69.5,4.6 70.3,5.6 71.2,4.4 72.0,5.0 72.9,3.8 73.7,3.2 74.6,5.0 75.4,4.0 76.3,2.9 77.1,2.4 78.0,3.9" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
                 <div class="text-right">
-                    <span class="font-mono font-semibold text-sm">1,551.81</span>
-                    <span class="font-mono text-xs text-emerald-400 ml-2">▲0.2%</span>
+                    <span class="font-mono font-semibold text-sm">1,542.13</span>
+                    <span class="font-mono text-xs text-red-400 ml-2">▼0.6%</span>
                 </div>
             </div>
         </div>
         <div class="flex justify-between items-center py-1.5 border-b border-slate-800 last:border-0">
             <span class="text-slate-400 text-sm font-mono tip shrink-0 mr-2" data-tip="안전자산 수요·인플레이션 헤지. 급등 시 위험회피 심리 강화">금</span>
             <div class="flex items-center gap-3">
-                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,3.9 2.9,3.2 3.7,3.6 4.6,2.9 5.4,2.0 6.3,4.6 7.1,4.4 8.0,5.2 8.8,4.0 9.7,4.8 10.5,2.9 11.4,3.8 12.2,4.5 13.1,5.3 14.0,6.1 14.8,6.0 15.7,7.6 16.5,11.6 17.4,12.0 18.2,14.3 19.1,14.4 19.9,12.3 20.8,14.7 21.6,13.1 22.5,12.6 23.3,10.9 24.2,9.1 25.1,10.9 25.9,10.8 26.8,10.8 27.6,9.5 28.5,8.9 29.3,9.3 30.2,9.6 31.0,8.5 31.9,8.8 32.7,9.0 33.6,8.0 34.4,8.7 35.3,10.2 36.2,9.8 37.0,10.1 37.9,9.9 38.7,10.5 39.6,11.7 40.4,12.3 41.3,11.4 42.1,11.2 43.0,12.7 43.8,12.2 44.7,10.5 45.6,10.2 46.4,9.9 47.3,9.9 48.1,10.5 49.0,10.2 49.8,10.5 50.7,12.2 51.5,12.2 52.4,12.9 53.2,12.5 54.1,12.4 54.9,12.7 55.8,13.0 56.7,13.7 57.5,13.0 58.4,12.1 59.2,13.3 60.1,13.1 60.9,13.8 61.8,13.3 62.6,15.2 63.5,15.2 64.3,16.3 65.2,18.4 66.0,18.6 66.9,16.9 67.8,15.3 68.6,15.3 69.5,14.9 70.3,16.8 71.2,17.4 72.0,18.1 72.9,20.0 73.7,19.4 74.6,18.8 75.4,19.6 76.3,19.6 77.1,18.9 78.0,17.9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,3.2 2.9,3.6 3.7,2.9 4.6,2.0 5.4,4.6 6.3,4.4 7.1,5.2 8.0,4.0 8.8,4.8 9.7,2.9 10.5,3.8 11.4,4.5 12.2,5.3 13.1,6.1 14.0,6.0 14.8,7.6 15.7,11.6 16.5,12.0 17.4,14.3 18.2,14.4 19.1,12.3 19.9,14.7 20.8,13.1 21.6,12.6 22.5,10.9 23.3,9.1 24.2,10.9 25.1,10.8 25.9,10.8 26.8,9.5 27.6,8.9 28.5,9.3 29.3,9.6 30.2,8.5 31.0,8.8 31.9,9.0 32.7,8.0 33.6,8.7 34.4,10.2 35.3,9.8 36.2,10.1 37.0,9.9 37.9,10.5 38.7,11.7 39.6,12.3 40.4,11.4 41.3,11.2 42.1,12.7 43.0,12.2 43.8,10.5 44.7,10.2 45.6,9.9 46.4,9.9 47.3,10.5 48.1,10.2 49.0,10.5 49.8,12.2 50.7,12.2 51.5,12.9 52.4,12.5 53.2,12.4 54.1,12.7 54.9,13.0 55.8,13.7 56.7,13.0 57.5,12.1 58.4,13.3 59.2,13.1 60.1,13.8 60.9,13.3 61.8,15.2 62.6,15.2 63.5,16.3 64.3,18.4 65.2,18.6 66.0,16.9 66.9,15.3 67.8,15.3 68.6,14.9 69.5,16.8 70.3,17.4 71.2,18.1 72.0,20.0 72.9,19.4 73.7,18.8 74.6,19.6 75.4,19.6 76.3,18.9 77.1,18.3 78.0,17.3" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
                 <div class="text-right">
-                    <span class="font-mono font-semibold text-sm">4,140.30</span>
+                    <span class="font-mono font-semibold text-sm">4,188.70</span>
                     <span class="font-mono text-xs text-emerald-400 ml-2">▲1.8%</span>
                 </div>
             </div>
@@ -151,20 +177,20 @@
         <div class="flex justify-between items-center py-1.5 border-b border-slate-800 last:border-0">
             <span class="text-slate-400 text-sm font-mono tip shrink-0 mr-2" data-tip="인플레이션 및 경기 활동 프록시. 급등 시 비용 압박·금리 상승 우려">원유</span>
             <div class="flex items-center gap-3">
-                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,19.8 2.9,19.9 3.7,20.0 4.6,19.3 5.4,17.7 6.3,16.5 7.1,16.4 8.0,14.0 8.8,10.3 9.7,8.9 10.5,13.1 11.4,11.7 12.2,8.5 13.1,7.4 14.0,9.3 14.8,8.3 15.7,8.3 16.5,8.3 17.4,7.5 18.2,11.4 19.1,9.8 19.9,10.5 20.8,9.0 21.6,7.0 22.5,5.8 23.3,6.4 24.2,6.8 25.1,2.5 25.9,2.2 26.8,2.0 27.6,9.0 28.5,7.7 29.3,8.2 30.2,7.2 31.0,10.2 31.9,10.2 32.7,8.9 33.6,13.0 34.4,10.8 35.3,9.9 36.2,9.5 37.0,8.4 37.9,9.0 38.7,8.3 39.6,6.9 40.4,4.3 41.3,5.0 42.1,6.2 43.0,4.5 43.8,6.0 44.7,8.7 45.6,8.8 46.4,8.6 47.3,7.6 48.1,6.1 49.0,6.5 49.8,6.4 50.7,4.8 51.5,3.6 52.4,4.0 53.2,7.5 54.1,8.3 54.9,8.2 55.8,9.2 56.7,11.2 57.5,11.1 58.4,11.6 59.2,9.8 60.1,9.2 60.9,8.4 61.8,9.5 62.6,10.4 63.5,10.2 64.3,11.3 65.2,10.6 66.0,11.5 66.9,12.6 67.8,14.1 68.6,15.9 69.5,15.6 70.3,15.7 71.2,16.4 72.0,17.0 72.9,18.1 73.7,17.5 74.6,18.5 75.4,17.9 76.3,18.4 77.1,18.7 78.0,18.8" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,19.9 2.9,20.0 3.7,19.3 4.6,17.7 5.4,16.5 6.3,16.4 7.1,14.0 8.0,10.3 8.8,8.9 9.7,13.1 10.5,11.7 11.4,8.5 12.2,7.4 13.1,9.3 14.0,8.3 14.8,8.3 15.7,8.3 16.5,7.5 17.4,11.4 18.2,9.8 19.1,10.5 19.9,9.0 20.8,7.0 21.6,5.8 22.5,6.4 23.3,6.8 24.2,2.5 25.1,2.2 25.9,2.0 26.8,9.0 27.6,7.7 28.5,8.2 29.3,7.2 30.2,10.2 31.0,10.2 31.9,8.9 32.7,13.0 33.6,10.8 34.4,9.9 35.3,9.5 36.2,8.4 37.0,9.0 37.9,8.3 38.7,6.9 39.6,4.3 40.4,5.0 41.3,6.2 42.1,4.5 43.0,6.0 43.8,8.7 44.7,8.8 45.6,8.6 46.4,7.6 47.3,6.1 48.1,6.5 49.0,6.4 49.8,4.8 50.7,3.6 51.5,4.0 52.4,7.5 53.2,8.3 54.1,8.2 54.9,9.2 55.8,11.2 56.7,11.1 57.5,11.6 58.4,9.8 59.2,9.2 60.1,8.4 60.9,9.5 61.8,10.4 62.6,10.2 63.5,11.3 64.3,10.6 65.2,11.5 66.0,12.6 66.9,14.1 67.8,15.9 68.6,15.6 69.5,15.7 70.3,16.4 71.2,17.0 72.0,18.1 72.9,17.5 73.7,18.5 74.6,17.9 75.4,18.4 76.3,18.7 77.1,18.7 78.0,18.8" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
                 <div class="text-right">
-                    <span class="font-mono font-semibold text-sm">68.39</span>
-                    <span class="font-mono text-xs text-red-400 ml-2">▼0.3%</span>
+                    <span class="font-mono font-semibold text-sm">68.35</span>
+                    <span class="font-mono text-xs text-red-400 ml-2">▼0.5%</span>
                 </div>
             </div>
         </div>
         <div class="flex justify-between items-center py-1.5 border-b border-slate-800 last:border-0">
             <span class="text-slate-400 text-sm font-mono tip shrink-0 mr-2" data-tip="한국 시장 전반. ISA 포트폴리오 국내 종목 맥락 파악">KOSPI</span>
             <div class="flex items-center gap-3">
-                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,17.2 2.9,16.6 3.7,16.5 4.6,15.9 5.4,15.4 6.3,14.4 7.1,14.7 8.0,16.7 8.8,19.8 9.7,17.6 10.5,17.6 11.4,19.1 12.2,17.9 13.1,17.5 14.0,17.6 14.8,18.1 15.7,17.8 16.5,17.4 17.4,16.1 18.2,16.9 19.1,16.8 19.9,18.4 20.8,17.8 21.6,17.4 22.5,18.2 23.3,18.3 24.2,19.0 25.1,20.0 25.9,18.1 26.8,19.2 27.6,18.6 28.5,18.2 29.3,18.0 30.2,16.4 31.0,16.8 31.9,16.4 32.7,16.6 33.6,15.9 34.4,15.4 35.3,14.8 36.2,15.0 37.0,14.8 37.9,14.1 38.7,13.9 39.6,13.7 40.4,13.7 41.3,13.1 42.1,13.0 43.0,12.7 43.8,13.1 44.7,11.6 45.6,9.7 46.4,9.2 47.3,9.2 48.1,7.7 49.0,8.5 49.8,7.6 50.7,7.0 51.5,9.2 52.4,9.1 53.2,10.2 54.1,10.4 54.9,7.8 55.8,7.6 56.7,6.7 57.5,5.9 58.4,6.1 59.2,4.8 60.1,3.4 60.9,3.4 61.8,4.1 62.6,6.2 63.5,9.2 64.3,6.5 65.2,8.1 66.0,8.0 66.9,6.4 67.8,4.5 68.6,3.7 69.5,3.1 70.3,2.2 71.2,2.3 72.0,2.0 72.9,6.0 73.7,4.9 74.6,2.8 75.4,5.1 76.3,5.2 77.1,4.8 78.0,5.6" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+                <svg width="80" height="22" viewBox="0 0 80 22" class="shrink-0 opacity-50"><polyline points="2.0,16.5 2.9,15.9 3.7,15.4 4.6,14.4 5.4,14.7 6.3,16.7 7.1,19.8 8.0,17.6 8.8,17.6 9.7,19.1 10.5,17.9 11.4,17.5 12.2,17.6 13.1,18.1 14.0,17.8 14.8,17.4 15.7,16.1 16.5,16.9 17.4,16.8 18.2,18.4 19.1,17.8 19.9,17.4 20.8,18.2 21.6,18.3 22.5,19.0 23.3,20.0 24.2,18.1 25.1,19.2 25.9,18.6 26.8,18.2 27.6,18.0 28.5,16.4 29.3,16.8 30.2,16.4 31.0,16.6 31.9,15.9 32.7,15.4 33.6,14.8 34.4,15.0 35.3,14.8 36.2,14.1 37.0,13.9 37.9,13.7 38.7,13.7 39.6,13.1 40.4,13.0 41.3,12.7 42.1,13.1 43.0,11.6 43.8,9.7 44.7,9.2 45.6,9.2 46.4,7.7 47.3,8.5 48.1,7.6 49.0,7.0 49.8,9.2 50.7,9.1 51.5,10.2 52.4,10.4 53.2,7.8 54.1,7.6 54.9,6.7 55.8,5.9 56.7,6.1 57.5,4.8 58.4,3.4 59.2,3.4 60.1,4.1 60.9,6.2 61.8,9.2 62.6,6.5 63.5,8.1 64.3,8.0 65.2,6.4 66.0,4.5 66.9,3.7 67.8,3.1 68.6,2.2 69.5,2.3 70.3,2.0 71.2,6.0 72.0,4.9 72.9,2.8 73.7,5.1 74.6,5.2 75.4,4.8 76.3,5.6 77.1,8.5 78.0,6.5" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
                 <div class="text-right">
-                    <span class="font-mono font-semibold text-sm">8,303.41</span>
-                    <span class="font-mono text-xs text-red-400 ml-2">▼2.0%</span>
+                    <span class="font-mono font-semibold text-sm">8,088.34</span>
+                    <span class="font-mono text-xs text-emerald-400 ml-2">▲5.8%</span>
                 </div>
             </div>
         </div>
@@ -199,18 +225,18 @@
     <div class="card p-5 mb-4">
         <div class="flex items-center justify-between mb-1">
             <h2 class="text-sm font-bold font-mono text-slate-300 uppercase tracking-wider">Policy Risk Monitor</h2>
-            <span class="px-2 py-0.5 rounded text-xs font-mono bg-emerald-900/40 text-emerald-400 border border-emerald-700/40">+0.117 (Dovish / Deal)</span>
+            <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800/60 text-slate-400 border border-slate-700/40">0.000 (Neutral)</span>
         </div>
-        <p class="text-xs text-slate-600 font-mono mb-4">as of 2026-07-03 00:12:34 UTC</p>
+        <p class="text-xs text-slate-600 font-mono mb-4">as of 2026-07-06 00:14:15 UTC</p>
 
         
     <div class="mb-4">
         <div class="flex items-center justify-between mb-1">
             <span class="text-xs text-slate-500 font-mono">Regime impact</span>
-            <span class="text-xs font-mono text-emerald-400">+0.117 &nbsp;→&nbsp; 78% of max bullish influence</span>
+            <span class="text-xs font-mono text-slate-500">0.000 &nbsp;→&nbsp; no policy influence on regime</span>
         </div>
         <div class="relative w-full bg-slate-800 rounded-full h-1.5">
-            <div class="absolute top-0 h-1.5 rounded-full bg-emerald-500" style="margin-left:50%;width:38.9%"></div>
+            <div class="absolute top-0 h-1.5 rounded-full bg-emerald-500" style="margin-left:50%;width:0.1%"></div>
             <div class="absolute top-0 left-1/2 w-px h-1.5 bg-slate-600"></div>
         </div>
         <div class="flex justify-between mt-1">
@@ -233,10 +259,15 @@
                     </tr>
                 </thead>
                 <tbody><tr class="border-b border-slate-800 last:border-0">
-            <td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-02</td>
-            <td class="py-2 pr-3 text-xs text-slate-400 max-w-[240px] truncate">Canada, Philippines Agree to Sign Trade Deal This Year, Grow Defense Ties</td>
-            <td class="py-2 pr-3 text-xs text-slate-500 whitespace-nowrap">Trade — Deal</td>
-            <td class="py-2 font-mono text-xs text-emerald-400 whitespace-nowrap">+0.1166</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-05</td>
+            <td class="py-2 pr-3 text-xs text-slate-400 max-w-[240px] truncate">Gold Steadies After Weekly Gain as Rate-Hike Worries Recede</td>
+            <td class="py-2 pr-3 text-xs text-slate-500 whitespace-nowrap">Fed — Dovish</td>
+            <td class="py-2 font-mono text-xs text-emerald-400 whitespace-nowrap">+0.1190</td>
+        </tr><tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-05</td>
+            <td class="py-2 pr-3 text-xs text-slate-400 max-w-[240px] truncate">Trump’s War Means Higher Global Interest Rates for Years to Come</td>
+            <td class="py-2 pr-3 text-xs text-slate-500 whitespace-nowrap">Trade — Tariff</td>
+            <td class="py-2 font-mono text-xs text-red-400 whitespace-nowrap">-0.1186</td>
         </tr></tbody>
             </table>
         </div>
@@ -247,22 +278,6 @@
         <p class="text-xs font-mono text-slate-500 uppercase tracking-wider mb-2">30-Day Modifier History</p>
         <table class="w-full">
             <tbody><tr class="border-b border-slate-800/50 last:border-0">
-            <td class="py-1 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-25</td>
-            <td class="py-1 w-32">
-                <div class="relative w-full bg-slate-800 rounded-full h-1">
-                    <div class="absolute top-0 h-1 rounded-full bg-emerald-500" style="width:0.0%"></div>
-                </div>
-            </td>
-            <td class="py-1 pl-2 font-mono text-xs text-slate-500 whitespace-nowrap">0.000</td>
-        </tr><tr class="border-b border-slate-800/50 last:border-0">
-            <td class="py-1 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-25</td>
-            <td class="py-1 w-32">
-                <div class="relative w-full bg-slate-800 rounded-full h-1">
-                    <div class="absolute top-0 h-1 rounded-full bg-emerald-500" style="width:15.0%"></div>
-                </div>
-            </td>
-            <td class="py-1 pl-2 font-mono text-xs text-emerald-400 whitespace-nowrap">+0.022</td>
-        </tr><tr class="border-b border-slate-800/50 last:border-0">
             <td class="py-1 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-26</td>
             <td class="py-1 w-32">
                 <div class="relative w-full bg-slate-800 rounded-full h-1">
@@ -358,6 +373,22 @@
                 </div>
             </td>
             <td class="py-1 pl-2 font-mono text-xs text-emerald-400 whitespace-nowrap">+0.117</td>
+        </tr><tr class="border-b border-slate-800/50 last:border-0">
+            <td class="py-1 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-06</td>
+            <td class="py-1 w-32">
+                <div class="relative w-full bg-slate-800 rounded-full h-1">
+                    <div class="absolute top-0 h-1 rounded-full bg-emerald-500" style="width:0.3%"></div>
+                </div>
+            </td>
+            <td class="py-1 pl-2 font-mono text-xs text-slate-500 whitespace-nowrap">0.000</td>
+        </tr><tr class="border-b border-slate-800/50 last:border-0">
+            <td class="py-1 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-06</td>
+            <td class="py-1 w-32">
+                <div class="relative w-full bg-slate-800 rounded-full h-1">
+                    <div class="absolute top-0 h-1 rounded-full bg-emerald-500" style="width:0.3%"></div>
+                </div>
+            </td>
+            <td class="py-1 pl-2 font-mono text-xs text-slate-500 whitespace-nowrap">0.000</td>
         </tr></tbody>
         </table>
     </div>
@@ -380,6 +411,201 @@
     
     
     
+    <div class="card p-5 mb-4">
+        <h2 class="text-sm font-bold mb-4 font-mono text-slate-300 uppercase tracking-wider">
+            포트폴리오
+            <span class="text-slate-600 font-normal normal-case text-xs ml-2">업데이트 2026-07-06</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+    <div>
+        <p class="text-xs text-slate-500 mb-2 font-mono">KR 국내/신흥국</p>
+        <table class="w-full">
+            <thead>
+                <tr class="text-xs text-slate-600 font-mono border-b border-slate-800">
+                    <th class="text-left pb-1 font-normal">티커</th>
+                    <th class="text-left pb-1 font-normal">종목</th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="12개월(1개월 제외) 수익률 기준 유니버스 내 백분위 순위">모멘텀</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="샤프비율 + 최대낙폭 기준 유니버스 내 백분위 순위">퀄리티</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="레짐 가중 복합 점수 (0-100)">점수</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="유니버스 내 순위">순위</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="총 자본 대비 배분 비중. position_size ÷ 종목 수">배분</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="진입 후 보유 일수">보유</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="진입가 대비 현재가 미실현 손익">미실현</span></th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">139260 <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">TIGER 200 IT</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">99</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">66</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">90</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#1/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">20.0%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">446770 <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">ACE 글로벌반도체TOP4 P</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">94</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">62</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">86</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#12/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">20.0%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">448330 <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">KODEX 삼성전자채권혼합</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">80</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">65</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">81</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#24/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">20.0%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">488770 <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">KODEX 머니마켓액티브</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">37</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">70</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">62</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#71/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">20.0%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">469830 <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">SOL 초단기채권액티브</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">37</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">70</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">62</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#73/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">20.0%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    
+            
+    <div>
+        <p class="text-xs text-slate-500 mb-2 font-mono">US 미국</p>
+        <table class="w-full">
+            <thead>
+                <tr class="text-xs text-slate-600 font-mono border-b border-slate-800">
+                    <th class="text-left pb-1 font-normal">티커</th>
+                    <th class="text-left pb-1 font-normal">종목</th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="12개월(1개월 제외) 수익률 기준 유니버스 내 백분위 순위">모멘텀</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="샤프비율 + 최대낙폭 기준 유니버스 내 백분위 순위">퀄리티</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="레짐 가중 복합 점수 (0-100)">점수</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="유니버스 내 순위">순위</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="총 자본 대비 배분 비중. position_size ÷ 종목 수">배분</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="진입 후 보유 일수">보유</span></th>
+                    <th class="text-left pb-1 font-normal"><span class="tip" data-tip="진입가 대비 현재가 미실현 손익">미실현</span></th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">AMD</td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Advanced Micro D</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">98</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">62</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">89</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#4/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">AMAT</td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Applied Material</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">94</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">59</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">86</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#15/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">FIX</td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Comfort Systems </td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">92</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">51</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">83</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#20/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">NVDA</td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">NVIDIA</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">58</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">44</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">59</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#90/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">TSLA</td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Tesla</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">49</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">50</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">39</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#141/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">SMH <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Semiconductor ET</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">88</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">56</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">82</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#23/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        
+        <tr class="border-b border-slate-800 hover:bg-slate-800/30">
+            <td class="py-2 pr-3 font-mono text-sm font-semibold">XLK <span class="text-slate-600 text-xs font-normal">ETF</span></td>
+            <td class="py-2 pr-3 text-slate-400 text-sm truncate max-w-[100px]">Technology ETF</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">78</td>
+            <td class="py-2 pr-3 font-mono text-sm text-slate-300">62</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-400">76</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">#27/192</td>
+            <td class="py-2 pr-3 font-mono text-xs text-emerald-500/80">14.3%</td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-600">—</td>
+            <td class="py-2 font-mono text-xs text-slate-600">—</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    
+        </div>
+    </div>
+    
     
     <div class="card p-5 mb-4">
         <h2 class="text-sm font-bold mb-1 font-mono text-slate-300 uppercase tracking-wider">추천 성과 추적</h2>
@@ -396,7 +622,7 @@
                         <th class="text-left pb-1 font-normal">4W 알파</th>
                     </tr>
                 </thead>
-                <tbody><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-29</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 448330 133690…</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-22</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 469830 488770…</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.8%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.3%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-15</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 448330 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.7%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+3.8%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-08</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">315930 446770 133690 488770 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.2%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.1%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-01</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.3%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.8%</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-1.9%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+0.1%</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-05-25</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.5%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.3%</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-0.9%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.1%</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-05-18</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.6%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+3.0%</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.0%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.8%</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-05-11</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">487240 139260 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.3%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.2%</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.6%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.6%</td></tr></tbody>
+                <tbody><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-07-06</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 448330 488770 469830…</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-29</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 448330 133690…</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-22</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 469830 488770…</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.8%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.3%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-15</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 446770 284430 448330 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.7%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+3.8%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-08</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">315930 446770 133690 488770 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.2%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.1%</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td><td class="py-2 pr-3 font-mono text-xs text-slate-700">—</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-06-01</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-6.3%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-red-400">-3.8%</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-1.9%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+0.1%</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-05-25</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+2.5%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.3%</td><td class="py-2 pr-3 font-mono text-xs text-red-400">-0.9%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.1%</td></tr><tr class="border-b border-slate-800 last:border-0"><td class="py-2 pr-3 font-mono text-xs text-slate-500 whitespace-nowrap">2026-05-18</td><td class="py-2 pr-3 font-mono text-xs text-slate-400">139260 487240 446770 284430 469830…</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.6%<span class="text-slate-700 text-xs ml-1">(12)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+3.0%</td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+4.0%<span class="text-slate-700 text-xs ml-1">(11)</span></td><td class="py-2 pr-3 font-mono text-xs text-emerald-400">+1.8%</td></tr></tbody>
             </table>
         </div>
         <p class="text-xs text-slate-700 font-mono mt-2">· (n) = 해당 기간 데이터 있는 종목 수 · 4W 데이터 없으면 — 표시 (보유 중)</p>
@@ -406,7 +632,7 @@
     <div class="card p-5 mb-4">
         <div class="flex items-center justify-between mb-3">
             <h2 class="text-sm font-bold font-mono text-slate-300 uppercase tracking-wider">내 포트폴리오</h2>
-            <span class="text-xs text-slate-600 font-mono">2026-07-03 00:12 UTC</span>
+            <span class="text-xs text-slate-600 font-mono">2026-07-06 00:14 UTC</span>
         </div>
         <div class="overflow-x-auto">
             <table class="w-full">
@@ -424,48 +650,48 @@
                     </tr>
                 </thead>
                 <tbody>
-        <tr class="border-b border-slate-800/50 last:border-0 bg-red-900/10 hover:bg-slate-800/20">
+        <tr class="border-b border-slate-800/50 last:border-0 bg-emerald-900/10 hover:bg-slate-800/20">
             <td class="py-2 pr-3 font-mono text-sm font-semibold">091230</td>
             <td class="py-2 pr-3 text-slate-400 text-xs truncate max-w-[120px]">TIGER 반도체TOP10</td>
-            <td class="py-2 pr-3 font-mono text-xs text-slate-300">155,820.00</td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-12.12%</span></td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-17.10%</span></td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-9.86%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+71.50%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +63.2%</span></td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-300">165,165.00</td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+6.00%</span></td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-8.22%</span></td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-5.94%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+64.55%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +71.8%</span></td>
             <td class="py-2"><span class="text-slate-700 text-xs font-mono">—</span></td>
         </tr>
         <tr class="border-b border-slate-800/50 last:border-0  hover:bg-slate-800/20">
             <td class="py-2 pr-3 font-mono text-sm font-semibold">458730</td>
             <td class="py-2 pr-3 text-slate-400 text-xs truncate max-w-[120px]">TIGER 미국배당다우존스</td>
-            <td class="py-2 pr-3 font-mono text-xs text-slate-300">15,725.00</td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.35%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.90%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+2.37%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+6.25%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +15.7%</span></td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-300">15,735.00</td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.06%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.80%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.83%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+7.58%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +15.6%</span></td>
             <td class="py-2"><span class="text-slate-700 text-xs font-mono">—</span></td>
         </tr>
         <tr class="border-b border-slate-800/50 last:border-0  hover:bg-slate-800/20">
             <td class="py-2 pr-3 font-mono text-sm font-semibold">360750</td>
             <td class="py-2 pr-3 text-slate-400 text-xs truncate max-w-[120px]">TIGER 미국S&P500</td>
-            <td class="py-2 pr-3 font-mono text-xs text-slate-300">28,875.00</td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.03%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+1.69%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+1.24%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+18.89%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +14.8%</span></td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-300">28,605.00</td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-0.94%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+2.56%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+0.02%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+16.82%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-500/70 text-xs font-mono">200MA +13.6%</span></td>
             <td class="py-2"><span class="text-slate-700 text-xs font-mono">—</span></td>
         </tr>
         <tr class="border-b border-slate-800/50 last:border-0 bg-red-900/10 hover:bg-slate-800/20">
             <td class="py-2 pr-3 font-mono text-sm font-semibold">009830</td>
             <td class="py-2 pr-3 text-slate-400 text-xs truncate max-w-[120px]">한화솔루션</td>
-            <td class="py-2 pr-3 font-mono text-xs text-slate-300">34,900.00</td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-3.32%</span></td>
-            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+5.44%</span></td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-14.46%</span></td>
-            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-6.06%</span></td>
-            <td class="py-2 pr-3"><span class="text-red-500/70 text-xs font-mono">200MA -2.1%</span></td>
+            <td class="py-2 pr-3 font-mono text-xs text-slate-300">32,700.00</td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-6.30%</span></td>
+            <td class="py-2 pr-3"><span class="text-emerald-400 font-mono text-xs">+6.69%</span></td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-18.05%</span></td>
+            <td class="py-2 pr-3"><span class="text-red-400 font-mono text-xs">-12.97%</span></td>
+            <td class="py-2 pr-3"><span class="text-red-500/70 text-xs font-mono">200MA -8.4%</span></td>
             <td class="py-2"><span class="text-slate-700 text-xs font-mono">—</span></td>
         </tr>
         <tr class="border-b border-slate-800/50 last:border-0  hover:bg-slate-800/20">
@@ -507,6 +733,63 @@
     </div>
     
     
+    <div class="card p-5 mb-4">
+        <h2 class="text-sm font-bold mb-1 font-mono text-slate-300 uppercase tracking-wider">
+            Benchmark vs SPY
+        </h2>
+        <p class="text-xs text-slate-600 mb-3 font-mono">미국 추천 종목 과거 실제 수익률 (등가중 평균) vs SPY — 팩터 엔진 선택 품질 검증</p>
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <thead>
+                    <tr class="text-xs text-slate-600 font-mono border-b border-slate-800">
+                        <th class="text-left pb-2 font-normal">기간</th>
+                        <th class="text-left pb-2 font-normal">SPY</th>
+                        <th class="text-left pb-2 font-normal">미국 포트폴리오</th>
+                        <th class="text-left pb-2 font-normal">
+                            <span class="tip" data-tip="포트폴리오 수익률 - SPY 수익률. 양수=시장 초과(알파), 음수=시장 대비 부진">알파</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+        <tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-4 font-mono text-sm text-slate-400">1W</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+1.4%</td>
+            <td class="py-2 pr-4 font-mono text-sm text-red-400">-4.4% <span class='text-slate-600 text-xs'>(7)</span></td>
+            <td class="py-2 font-mono text-sm font-semibold text-red-400">-5.8%</td>
+        </tr>
+        <tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-4 font-mono text-sm text-slate-400">1M</td>
+            <td class="py-2 pr-4 font-mono text-sm text-red-400">-1.7%</td>
+            <td class="py-2 pr-4 font-mono text-sm text-red-400">-2.8% <span class='text-slate-600 text-xs'>(7)</span></td>
+            <td class="py-2 font-mono text-sm font-semibold text-red-400">-1.1%</td>
+        </tr>
+        <tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-4 font-mono text-sm text-slate-400">3M</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+14.0%</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+48.3% <span class='text-slate-600 text-xs'>(7)</span></td>
+            <td class="py-2 font-mono text-sm font-semibold text-emerald-400">+34.4%</td>
+        </tr>
+        <tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-4 font-mono text-sm text-slate-400">6M</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+9.0%</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+62.2% <span class='text-slate-600 text-xs'>(7)</span></td>
+            <td class="py-2 font-mono text-sm font-semibold text-emerald-400">+53.2%</td>
+        </tr>
+        <tr class="border-b border-slate-800 last:border-0">
+            <td class="py-2 pr-4 font-mono text-sm text-slate-400">1Y</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+21.9%</td>
+            <td class="py-2 pr-4 font-mono text-sm text-emerald-400">+137.7% <span class='text-slate-600 text-xs'>(7)</span></td>
+            <td class="py-2 font-mono text-sm font-semibold text-emerald-400">+115.8%</td>
+        </tr></tbody>
+            </table>
+        </div>
+        <ul class="mt-3 space-y-0.5">
+            <li class="text-xs text-slate-700 font-mono">· 미국 종목만 포함 — KR ETF는 KRW 기준이라 SPY(USD)와 직접 비교 불가</li>
+            <li class="text-xs text-slate-700 font-mono">· 예측값이 아닌 실제 가격 히스토리 기반 수익률 · (N) = 해당 기간 데이터가 있는 종목 수</li>
+            <li class="text-xs text-slate-700 font-mono">· 알파 양수 = 팩터 선택이 SPY 단순 매수 대비 초과 수익, 음수 = 시장 대비 부진</li>
+        </ul>
+    </div>
+    
     
     <div class="card p-5 mb-4">
         <h2 class="text-sm font-bold mb-3 font-mono text-slate-300 uppercase tracking-wider">시장 뉴스 &amp; 해설</h2>
@@ -514,42 +797,35 @@
     <div class="mb-4 p-4 bg-slate-900/60 border border-slate-800 rounded-lg">
         <div class="flex items-center justify-between mb-3">
             <p class="text-xs font-mono text-slate-500 uppercase tracking-wider">AI 시장 해설</p>
-            <span class="text-xs text-slate-700 font-mono">2026-07-03</span>
+            <span class="text-xs text-slate-700 font-mono">2026-07-06</span>
         </div>
         
         <div class="mb-3">
             <div class="flex items-center gap-2 mb-0.5">
-                <span class="font-mono text-xs text-slate-300">AI 섹터 조정장</span>
-                <span class="text-red-400 font-mono text-xs">[약세]</span>
-            </div>
-            <p class="text-xs text-slate-500 leading-relaxed">AI 관련 대형주들이 하락세를 보이면서 기술주 중심의 상승장에 제동이 걸렸습니다. 테슬라, SanDisk 등 주요 종목들의 낙폭이 두드러집니다.</p>
-        </div>
-        <div class="mb-3">
-            <div class="flex items-center gap-2 mb-0.5">
-                <span class="font-mono text-xs text-slate-300">대형주 안정성 vs 소형주 기회</span>
-                <span class="text-slate-400 font-mono text-xs">[중립]</span>
-            </div>
-            <p class="text-xs text-slate-500 leading-relaxed">다우지수는 고점을 경신하는 가운데 애플, 아마존 같은 우량주들의 강세가 계속되고 있습니다. 소형주 ETF 비교 자료도 늘어나며 투자자들의 자산배분 관심이 높아집니다.</p>
-        </div>
-        <div class="mb-3">
-            <div class="flex items-center gap-2 mb-0.5">
-                <span class="font-mono text-xs text-slate-300">Q2 실적시즌 개막, 은행주 주목</span>
-                <span class="text-slate-400 font-mono text-xs">[중립]</span>
-            </div>
-            <p class="text-xs text-slate-500 leading-relaxed">2분기 기업 실적발표가 시작되며 특히 금융권 실적이 시장의 경기 신호로 주목받고 있습니다. 중립적 시장 환경에서 실적 품질이 중요한 판단 기준이 될 것입니다.</p>
-        </div>
-        <div class="mb-3">
-            <div class="flex items-center gap-2 mb-0.5">
-                <span class="font-mono text-xs text-slate-300">특수주 강세와 암호화폐 변동성</span>
+                <span class="font-mono text-xs text-slate-300">AI 대형 IPO 기대감</span>
                 <span class="text-emerald-400 font-mono text-xs">[강세]</span>
             </div>
-            <p class="text-xs text-slate-500 leading-relaxed">StubHub의 30% 월간 상승, Palantir의 강세 등 특정 섹터 중심의 수익 기회가 발생하고 있는 반면 솔라나 같은 암호자산의 조정이 계속됩니다.</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Anthropic이 올 가을 1조 달러 규모 IPO를 추진할 것으로 예상되면서 AI 관련 기업들과 투자자들의 관심이 집중되고 있습니다. Microsoft와 Nvidia의 GPU 파운드리 협력도 AI 생태계 확대를 보여주고 있습니다.</p>
         </div>
-        <div class="mt-2 pt-2 border-t border-slate-800"><ul class="space-y-0.5"><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">기술주 (AI/반도체)</span> — AI 관련 대형주들의 조정이 진행 중이며, 실적 시즌 진입 전 변동성이 지속될 가능성이 높습니다.</li><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">금융</span> — Q2 은행 실적 발표 시즌으로 진입하면서 금융주의 실적 품질이 경기 신호로 작용할 예정입니다.</li><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">소비재/엔터테인먼트</span> — StubHub 등 이벤트 플랫폼 부문의 강세가 돋보이며 경기 회복력 있는 소비 부문에 관심이 증가합니다.</li></ul></div>
-        <div class="mt-3 pt-3 border-t border-slate-800"><p class="text-xs text-slate-600 font-mono uppercase tracking-wider mb-1">포트폴리오 시사점</p><p class="text-xs text-slate-400 leading-relaxed">현재 중립 환경에서 AI 섹터 조정에 주의하면서, 우량주와 소형주의 균형 있는 구성이 필요합니다. Q2 실적 발표 시기까지 기업별 실적 품질 차이가 주가 변동을 결정할 중요 요소가 될 것으로 예상됩니다.</p></div>
+        <div class="mb-3">
+            <div class="flex items-center gap-2 mb-0.5">
+                <span class="font-mono text-xs text-slate-300">기술주 강세 지속</span>
+                <span class="text-emerald-400 font-mono text-xs">[강세]</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">Apple, SpaceX, Robinhood 등 대형 기술주들이 상승세를 이어가고 있으며, 나스닥 선물이 사상 최고치를 경신했습니다.</p>
+        </div>
+        <div class="mb-3">
+            <div class="flex items-center gap-2 mb-0.5">
+                <span class="font-mono text-xs text-slate-300">역사적 경고 신호 발생</span>
+                <span class="text-red-400 font-mono text-xs">[약세]</span>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">주식시장에 부정적 신호가 나타났다는 분석이 제기되고 있어 투자자들이 포지션 점검이 필요한 상황입니다.</p>
+        </div>
+        <div class="mt-2 pt-2 border-t border-slate-800"><ul class="space-y-0.5"><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">기술/AI</span> — Anthropic IPO 예상과 NVIDIA의 칩 공급 확대로 기술주와 AI 칩 제조사들이 강세를 보이고 있습니다.</li><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">바이오테크</span> — Revolution Medicines가 2026년 140% 상승하며 핫한 섹터로 주목받고 있습니다.</li><li class="text-xs text-slate-500 font-mono py-0.5"><span class="text-slate-400">우주항공/인프라</span> — Rocket Lab 등 우주항공 관련주들의 장기 성장성에 대한 투자자 관심이 증가하고 있습니다.</li></ul></div>
+        <div class="mt-3 pt-3 border-t border-slate-800"><p class="text-xs text-slate-600 font-mono uppercase tracking-wider mb-1">포트폴리오 시사점</p><p class="text-xs text-slate-400 leading-relaxed">현재 리스크온 장세 속 기술주와 AI 관련주가 강세이나, 역사적 경고 신호가 발생했으므로 포지션 규모를 점검하고 과도한 집중투자를 피하는 것이 현명합니다. 장기 성장주 중심으로 분산 투자하되 수익 실현 기회를 활용하세요.</p></div>
         
     </div>
-        <ul class="mt-2"><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">01</span><a href="#" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Dow Jones Futures: Dow Hits High But AI Tumbles; Apple, Robinhood Are Buys As Tesla, Sandisk Dive</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">02</span><a href="https://finance.yahoo.com/markets/stocks/articles/could-spacex-become-first-10-235000512.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Could SpaceX Become the First $10 Trillion Company? Here's What Would Need to Happen.</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">03</span><a href="https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-buy-dip-233500731.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">3 Growth Stocks to Buy on the Dip</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">04</span><a href="https://finance.yahoo.com/markets/options/articles/next-30-crash-happen-3-232950749.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">The Next 30% Crash Will Happen. These 3 ETFs Mean You Won’t Panic-Sell at the Bottom</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">05</span><a href="https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-pltr-stock-trades-232424730.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Palantir Technologies (PLTR) Stock Trades Up, Here Is Why</a></li></ul>
+        <ul class="mt-2"><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">01</span><a href="#" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Dow Jones Futures Rise, Techs Jump; Apple, SpaceX, Sandisk, Robinhood In Focus</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">02</span><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-could-1-trillion-ipo-235600570.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Anthropic Could Be a $1 Trillion IPO This Fall. These 2 Stocks Already Own a Piece.</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">03</span><a href="https://finance.yahoo.com/markets/stocks/articles/historic-warning-signal-suggests-stock-235000308.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Historic Warning Signal Suggests the Stock Market Is Headed Somewhere Investors Do Not Want to Go</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">04</span><a href="https://finance.yahoo.com/healthcare/articles/revolution-medicines-nearly-140-2026-233500896.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Revolution Medicines Is Up Nearly 140% in 2026. Is the Hot Biotech Stock Still a Buy?</a></li><li class="py-1.5 border-b border-slate-800 last:border-0 flex items-start gap-2"><span class="text-slate-600 text-xs font-mono mt-0.5 shrink-0">05</span><a href="https://finance.yahoo.com/markets/stocks/articles/why-robinhood-stock-jumped-week-233209394.html" target="_blank" rel="noopener" class="text-sm text-slate-300 hover:text-white leading-snug">Why Robinhood Stock Jumped This Week</a></li></ul>
     </div>
     
     
@@ -643,7 +919,7 @@
     </details>
     
     <p class="text-xs text-slate-700 text-center mt-6 font-mono">
-        Factor Engine · Cross-sectional Ranking · 2026-07-03 09:12 KST
+        Factor Engine · Cross-sectional Ranking · 2026-07-06 09:14 KST
     </p>
 </div>
 </body>
